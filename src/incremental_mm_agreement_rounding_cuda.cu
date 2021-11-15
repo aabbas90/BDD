@@ -190,14 +190,6 @@ namespace LPMP {
                         return {abs(r)*delta, 0.0};
                 }
             }
-            // else
-            // {
-            //     const REAL cur_abs_mm_diff = abs(mm_0 - mm_1);
-            //     if(mm_0 < mm_1)
-            //         return {0.0, delta * pow(cur_abs_mm_diff / max_incon_mm_diff, decay_factor_inconsistent)};
-            //     else
-            //         return {delta * pow(cur_abs_mm_diff / max_incon_mm_diff, decay_factor_inconsistent), 0.0};
-            // }
         }
     };
 
