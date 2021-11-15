@@ -1,7 +1,8 @@
-[![Build Status](https://travis-ci.com/LPMP/BDD.svg?branch=main)](https://travis-ci.com/LPMP/BDD)
+# FADOP
+An integer linear program solver using a Lagrange decomposition into binary decision diagrams on GPUs. Lagrange multipliers are updated through dual block coordinate ascent.
 
-# BDD
-An integer linear program solver using a Lagrange decomposition into binary decision diagrams. Lagrange multipliers are updated through dual block coordinate ascent.
+## Requirements
+Developed and tested on CUDA 11.2.
 
 ## Installation
 
@@ -13,6 +14,9 @@ Then continue with creating a build folder and use cmake:
 
 `mkdir build && cd build && cmake ..`
 
-## References
-If you use this work please cite
-* [`J. H. Lange and P. Swoboda. Efficient Message Passing for 0–1 ILPs with Binary Decision Diagrams. In ICML 2021.`](http://proceedings.mlr.press/v139/lange21a.html)
+## Running
+In the build folder execute:
+
+
+    cd src
+    ./bdd_solver_cl -i <PATH_TO_LP> -s mma_cuda --incremental_primal --incremental_initial_perturbation 1.0 --incremental_perturbation_growth_rate 1.2
